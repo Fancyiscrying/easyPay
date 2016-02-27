@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>color_text_passcode</key>
+	<string>#906014</string>
+	<key>color_login_field</key>
+	<string>#f2a537</string>
+	<key>color_billdetail_label</key>
+	<string>#33cc33</string>
+	<key>color_myfutong_button</key>
+	<string>#077fa6</string>
+	<key>color_myfutong_status</key>
+	<string>#40bcd3</string>
+	<key>color_perinfor_label</key>
+	<string>#077fa6</string>
+	<key>color_myassert_label</key>
+	<string>#40bcd3</string>
+	<key>color_navbar_tint</key>
+	<string>#0B0B0B</string>
+	<key>color_tabbar_select</key>
+	<string>#34a4ff</string>
+	<key>color_common_cellbg</key>
+	<string>#D8D8D8</string>
+</dict>
+</plist>

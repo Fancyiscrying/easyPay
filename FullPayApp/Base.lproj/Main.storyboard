@@ -1,26 +1,894 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hEd-Oi-zD1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--动态-->
+        <scene sceneID="NNJ-CW-aU5">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="FPViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <navigationController definesPresentationContext="YES" id="lLY-Ka-rSZ" customClass="FPNavTrendViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="动态" image="tab_ic_trend_off.png" id="beg-EK-mZF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oV2-dz-8eA">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NcO-vX-c2n" kind="relationship" relationship="rootViewController" id="7sN-AP-xnH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXc-ST-6ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="1908"/>
+        </scene>
+        <!--Nav Login View Controller-->
+        <scene sceneID="mS7-Yz-eve">
+            <objects>
+                <navigationController storyboardIdentifier="FPNavLoginView" definesPresentationContext="YES" id="2GS-wf-jDE" customClass="FPNavLoginViewController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hh3-XL-6Es">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D9F-l4-LN1" kind="relationship" relationship="rootViewController" id="a39-9E-TWw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7g-Lf-U2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557" y="-217"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Xme-Pg-TWk">
+            <objects>
+                <viewController storyboardIdentifier="FPLoginView" id="D9F-l4-LN1" customClass="FPLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="klw-hZ-w2y"/>
+                        <viewControllerLayoutGuide type="bottom" id="8cP-Iz-Mzd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kIr-sb-N2X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vfI-4Y-Ags"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83B-AT-oSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-217"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="50N-pb-wVD">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="c0z-2j-Fuo" customClass="FPNavHomeViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tab_ic_home_off.png" id="DfJ-lQ-ihj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pot-t3-8Kj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wsd-O5-GYW" kind="relationship" relationship="rootViewController" id="ws9-c7-Jgc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zm-bU-Iec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="-264"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="NSB-LO-hJM">
+            <objects>
+                <viewController storyboardIdentifier="FPMainView" id="wsd-O5-GYW" customClass="FPMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y5F-nt-tDt"/>
+                        <viewControllerLayoutGuide type="bottom" id="3jz-yI-ghX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eea-P5-Lyv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-4y-SgC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2az-TX-0w4"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U00-32-wWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="-264"/>
+        </scene>
+        <!--Trade Bills View Controller-->
+        <scene sceneID="hhi-XU-zt7">
+            <objects>
+                <viewController storyboardIdentifier="FPTradeBillsView" id="sxi-bm-t4W" customClass="FPTradeBillsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnh-b0-PUW"/>
+                        <viewControllerLayoutGuide type="bottom" id="X6n-FJ-Krk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O1o-3s-Lt6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Nu-x4-XIt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YoP-Gt-yRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1552" y="-264"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="HSe-8o-HlR">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Uwg-N8-Z25" userLabel="个人中心" customClass="FPNavUserViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="个人中心" image="tab_ic_user_off.png" id="Q1G-Au-Dwh" userLabel="个人中心"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="1gj-HE-P0x">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Szy-Me-TDP" kind="relationship" relationship="rootViewController" id="svp-9W-A2O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wK5-fu-9Th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="433"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="KNv-du-6Co">
+            <objects>
+                <viewController id="Szy-Me-TDP" userLabel="个人中心" customClass="FPUserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Pk-22-dp8"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ql-JN-F8b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vwm-ou-LPE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="qkT-dK-aAp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的富之富" id="Yc9-zP-FfX" userLabel="个人中心"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfM-fz-BAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="433"/>
+        </scene>
+        <!--Preferential View Controller-->
+        <scene sceneID="E1N-EV-RdM">
+            <objects>
+                <viewController storyboardIdentifier="FPPreferentialView" id="CNl-A5-hOv" customClass="FPPreferentialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5n-vP-7o4"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCN-9g-gHV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p9w-9A-esJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Gs-a1-p1p">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pWX-dJ-rH3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="544"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="pWX-dJ-rH3" id="ZcB-5g-aP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3O-wR-FL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="-264"/>
+        </scene>
+        <!--Private Message View Controller-->
+        <scene sceneID="fGl-Up-hzq">
+            <objects>
+                <viewController storyboardIdentifier="FPPrivateMessageView" id="Kkm-Cf-RHo" customClass="FPPrivateMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DHo-4r-MDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zqf-nk-lD4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTC-4r-lPw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kiu-gw-c5C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Glq-ct-SMU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="544"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Glq-ct-SMU" id="Dcv-in-V1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmm-bJ-JXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="-264"/>
+        </scene>
+        <!--Bill Details View Controller-->
+        <scene sceneID="t8d-vH-LEs">
+            <objects>
+                <viewController storyboardIdentifier="FPBillDetailsView" id="1pK-xY-gH8" customClass="FPBillDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EM5-z9-Tne"/>
+                        <viewControllerLayoutGuide type="bottom" id="MHd-8f-cli"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="20T-cc-Yxm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="33e-gB-HxA">
+                                <rect key="frame" x="0.0" y="16" width="320" height="322"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="33e-gB-HxA" id="vBy-z2-4GH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxr-q9-cqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552" y="-972"/>
+        </scene>
+        <!--Prefer Detail View Controller-->
+        <scene sceneID="Huw-2g-nnH">
+            <objects>
+                <viewController storyboardIdentifier="FPPreferDetailView" id="cwN-T6-GCz" customClass="FPPreferDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1X-Bm-StK"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Eb-JE-ysP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Dm-gL-g83">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tpc-xS-Xtt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VTy-38-hTh">
+                                <rect key="frame" x="0.0" y="30" width="320" height="324"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VTy-38-hTh" id="flS-Vh-bYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6a-hW-p5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="-972"/>
+        </scene>
+        <!--Msg Detail View Controller-->
+        <scene sceneID="Fwz-UR-yN4">
+            <objects>
+                <viewController storyboardIdentifier="FPMsgDetailView" id="a9J-aM-CAK" customClass="FPMsgDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Hl-sW-PIu"/>
+                        <viewControllerLayoutGuide type="bottom" id="rx6-4M-4Tw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vBF-1m-8ab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="m7f-e8-4ph">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzH-b6-kqC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VzH-b6-kqC" id="oEt-Em-YwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4BE-4d-Rdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302" y="-972"/>
+        </scene>
+        <!--My Asset View Controller-->
+        <scene sceneID="Hat-UL-k8q">
+            <objects>
+                <viewController storyboardIdentifier="FPMyAssetView" id="PMd-5d-7up" customClass="FPMyAssetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ns-YY-s63"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tns-Y4-yuc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KsP-Il-ZvC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="ywY-Ox-p0S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4lK-wj-Ak2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bE5-lr-mAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624" y="433"/>
+        </scene>
+        <!--Personal Info View Controller-->
+        <scene sceneID="HhZ-Dh-w9L">
+            <objects>
+                <viewController storyboardIdentifier="FPPersonalInfo" id="l3f-Ko-11y" customClass="FPPersonalInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tlA-QU-zul"/>
+                        <viewControllerLayoutGuide type="bottom" id="kMl-Jd-rTs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g2t-Ts-kya">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="nK2-xL-dhP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="501"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-c8-nWu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wGA-c8-nWu" id="soi-2F-R0I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WlB-k9-28k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034" y="433"/>
+        </scene>
+        <!--Security Set View Controller-->
+        <scene sceneID="085-S7-JoD">
+            <objects>
+                <viewController storyboardIdentifier="FPSecuritySetView" id="hG5-do-HYp" customClass="FPSecuritySetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W2p-0g-3KZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="v12-Mx-fzP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VXX-Vq-vRz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-Rt-D4A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="507"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fgH-Fy-xsu">
+                                <rect key="frame" x="0.0" y="-7" width="320" height="503"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fgH-Fy-xsu" id="0uR-1K-A3I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3G-H1-bBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2439" y="433"/>
+        </scene>
+        <!--My2 Dim Code View Controller-->
+        <scene sceneID="RsA-f2-eQk">
+            <objects>
+                <viewController storyboardIdentifier="FPMy2DimCodeView" id="NUH-yn-thG" customClass="FPMy2DimCodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AR1-v2-qtp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ULL-pe-oww"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mpr-B2-bzT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ht-z2-DX4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="perinfor_img_user_none.png" translatesAutoresizingMaskIntoConstraints="NO" id="gja-Zd-Azm">
+                                <rect key="frame" x="54" y="36" width="60" height="60"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-Cf-e4A">
+                                <rect key="frame" x="116" y="36" width="150" height="27"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-P2-Q2Z">
+                                <rect key="frame" x="116" y="66" width="150" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESd-se-NLF">
+                                <rect key="frame" x="40" y="55" width="240" height="240"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="扫二维码，可以向我付款哦！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDi-d4-MGb">
+                                <rect key="frame" x="62" y="320" width="197" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="img_2DimCode" destination="ESd-se-NLF" id="6b9-HC-RXK"/>
+                        <outlet property="img_Photo" destination="gja-Zd-Azm" id="SeM-Bg-4Vv"/>
+                        <outlet property="lbl_MobileNo" destination="2gi-P2-Q2Z" id="Rrw-Ig-vIG"/>
+                        <outlet property="lbl_Name" destination="R1L-Cf-e4A" id="AH9-LP-t0T"/>
+                        <outlet property="lbl_alert" destination="rDi-d4-MGb" id="8WB-EL-MSF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIF-Lb-sKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3962" y="433"/>
+        </scene>
+        <!--Limit Set View Controller-->
+        <scene sceneID="VjK-Go-Mmh">
+            <objects>
+                <viewController storyboardIdentifier="FPLimitSetView" id="BDH-gA-3BD" customClass="FPLimitSetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hiA-CM-h45"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQM-bu-fE4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eGD-Xl-r4d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="grk-m7-CyJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="507"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AMf-7T-cgt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="AMf-7T-cgt" id="FKe-pk-Kk6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9p-Aa-MhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832" y="433"/>
+        </scene>
+        <!--My Bank Cards View Controller-->
+        <scene sceneID="8NG-MH-hWv">
+            <objects>
+                <viewController storyboardIdentifier="FPMyBankCardsView" id="DHF-aW-cO9" customClass="FPMyBankCardsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lm0-H3-4qo"/>
+                        <viewControllerLayoutGuide type="bottom" id="X6S-Zp-cpk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhR-JS-H5v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-Pd-m4f">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" maximumZoomScale="2" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="meI-vm-Wh9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tableView" destination="meI-vm-Wh9" id="VYe-AH-yNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfF-pj-esN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3205" y="433"/>
+        </scene>
+        <!--My Futong Cards View Controller-->
+        <scene sceneID="TI1-2w-gpH">
+            <objects>
+                <viewController storyboardIdentifier="FPMyFutongCardsView" id="F2x-iB-4kF" customClass="FPMyFutongCardsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UNa-R5-Vfp"/>
+                        <viewControllerLayoutGuide type="bottom" id="TJd-tI-KS2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ji-pD-xp6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-eS-b32">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUl-nM-NDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3590" y="433"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="TSn-to-Hi2">
+            <objects>
+                <tabBarController storyboardIdentifier="FPTabBarView" definesPresentationContext="YES" id="hEd-Oi-zD1" customClass="FPTabBarViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vJh-dl-zME"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2xa-24-7Lg">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Uwg-N8-Z25" kind="relationship" relationship="viewControllers" id="LlM-R2-j41"/>
+                        <segue destination="c0z-2j-Fuo" kind="relationship" relationship="viewControllers" id="5tA-pO-HbE"/>
+                        <segue destination="vZJ-Ao-geU" kind="relationship" relationship="viewControllers" id="SEg-X5-Auo"/>
+                        <segue destination="lLY-Ka-rSZ" kind="relationship" relationship="viewControllers" id="4Mx-OH-T9M"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpF-KN-KtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110" y="858"/>
+        </scene>
+        <!--动态-->
+        <scene sceneID="hLd-3c-aHY">
+            <objects>
+                <viewController storyboardIdentifier="FPTrendView" id="NcO-vX-c2n" customClass="FPTrendViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lYp-hR-SFE"/>
+                        <viewControllerLayoutGuide type="bottom" id="agw-gC-UtD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F0p-ir-Rcl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="fvA-SK-Qg9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="动态" id="yuf-gS-98U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QlG-gB-DbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189" y="1908"/>
+        </scene>
+        <!--富生活-->
+        <scene sceneID="P8w-kF-8Vo">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="vZJ-Ao-geU" customClass="FPNavLifeViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="富生活" image="tab_ic_life_off.png" id="lmZ-aS-wdq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IOJ-Vx-IpP">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="336-oO-pSf" kind="relationship" relationship="rootViewController" id="2X7-uW-754"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcA-sG-7q5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="1143"/>
+        </scene>
+        <!--Life View Controller-->
+        <scene sceneID="7F7-An-KXM">
+            <objects>
+                <viewController storyboardIdentifier="FPLifeView" id="336-oO-pSf" customClass="FPLifeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tVR-Co-vvf"/>
+                        <viewControllerLayoutGuide type="bottom" id="peR-lJ-WV8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Diz-cW-4Pa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="AMT-1c-itO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QND-oR-qPq">
+                                <rect key="frame" x="20" y="20" width="55" height="55"/>
+                                <animations/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" image="life_bt_spree.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahz-hK-Xz5">
+                                <rect key="frame" x="170" y="20" width="55" height="55"/>
+                                <animations/>
+                                <state key="normal" image="life_bt_phonebill.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJu-ge-EdR">
+                                <rect key="frame" x="245" y="20" width="55" height="55"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="life_bt_groupon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrt-mf-rgh">
+                                <rect key="frame" x="95" y="20" width="55" height="55"/>
+                                <animations/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" image="life_bt_wallet.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UO-hY-wGq">
+                                <rect key="frame" x="20" y="118" width="55" height="55"/>
+                                <animations/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" image="life_bt_sst.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s33-pK-OnQ">
+                                <rect key="frame" x="95" y="118" width="55" height="55"/>
+                                <animations/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" image="life_bt_redPacket.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ji8-9m-Jll">
+                                <rect key="frame" x="175" y="118" width="55" height="55"/>
+                                <animations/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" image="life_bt_manager.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="富钱包" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8U-Lq-Fpe">
+                                <rect key="frame" x="95" y="83" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="随手淘" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG1-bP-132">
+                                <rect key="frame" x="20" y="181" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手机充值" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS2-ez-OfS">
+                                <rect key="frame" x="170" y="83" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="红包" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSC-SP-AWn">
+                                <rect key="frame" x="95" y="181" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="团购" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-nI-qDi">
+                                <rect key="frame" x="245" y="83" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大礼包" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-sY-avh">
+                                <rect key="frame" x="20" y="83" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="餐厅点评" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4G4-42-460">
+                                <rect key="frame" x="175" y="181" width="55" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6gU-kl-L9X"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btn_FullWallet" destination="xrt-mf-rgh" id="b6e-ks-Wbd"/>
+                        <outlet property="btn_GroupBuy" destination="yJu-ge-EdR" id="uvV-wm-fg8"/>
+                        <outlet property="btn_Manager" destination="Ji8-9m-Jll" id="whr-TT-nnr"/>
+                        <outlet property="btn_Recharge" destination="ahz-hK-Xz5" id="Aay-f7-zNM"/>
+                        <outlet property="btn_RedPacket" destination="s33-pK-OnQ" id="7ib-Dm-Y4N"/>
+                        <outlet property="btn_Spree" destination="QND-oR-qPq" id="Rfv-3k-tgM"/>
+                        <outlet property="btn_SuiShouTao" destination="4UO-hY-wGq" id="INp-Xh-eYa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rk-xu-ueZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="1126"/>
+        </scene>
+        <!--Full Wallet Enclosure View Controller-->
+        <scene sceneID="dvG-RQ-E9c">
+            <objects>
+                <viewController storyboardIdentifier="FPFullWalletEnclosure" id="DzE-q8-tgb" customClass="FPFullWalletEnclosureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csm-BM-wBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzL-iF-Ytf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hkh-6s-jqY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="dic-4v-x2N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="560"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="什么是圈存？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMY-ee-WIc">
+                                <rect key="frame" x="20" y="20" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="哪些类型的卡片需要圈存才能使用？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn2-rD-E7M">
+                                <rect key="frame" x="20" y="109" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="答：凡是离线卡，都需要圈存才能将资金写入卡片里使用，例如：富士康厂牌、深圳通公交卡、餐饮会员卡等" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgL-wl-Ji0">
+                                <rect key="frame" x="20" y="142" width="281" height="50"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="富钱包卡在哪里进行圈存？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXZ-HW-pmO">
+                                <rect key="frame" x="20" y="208" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="答：有2种方式。其一，可在食堂富钱包服务点旁边的自助圈存机操作；其二，也可以利用带有NFC功能的手机配合富之富APP进行圈存" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgv-n5-pY8">
+                                <rect key="frame" x="20" y="243" width="266" height="91"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="loi-OC-Nlg">
+                                <rect key="frame" x="8" y="21" width="5" height="17"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3B-je-fT4">
+                                <rect key="frame" x="8" y="110" width="5" height="17"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-S5-65e">
+                                <rect key="frame" x="8" y="209" width="5" height="17"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="答：圈存，就是将用户帐户中已存入的资金，划转到所持的富钱包离线卡上。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZw-Ar-0BZ">
+                                <rect key="frame" x="20" y="49" width="281" height="52"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2U-A5-ErB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="1132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG.png" width="320" height="518"/>
+        <image name="life_bt_groupon.png" width="55" height="55"/>
+        <image name="life_bt_manager.png" width="55" height="55"/>
+        <image name="life_bt_phonebill.png" width="55" height="55"/>
+        <image name="life_bt_redPacket.png" width="55" height="55"/>
+        <image name="life_bt_spree.png" width="55" height="55"/>
+        <image name="life_bt_sst.png" width="55" height="55"/>
+        <image name="life_bt_wallet.png" width="55" height="55"/>
+        <image name="perinfor_img_user_none.png" width="49" height="49"/>
+        <image name="tab_ic_home_off.png" width="30" height="30"/>
+        <image name="tab_ic_life_off.png" width="30" height="30"/>
+        <image name="tab_ic_trend_off.png" width="30" height="30"/>
+        <image name="tab_ic_user_off.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
