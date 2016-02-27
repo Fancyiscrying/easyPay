@@ -1,14 +1,14 @@
 //
-//  FPMarketing.m
+//  FPPreferModel.m
 //  FullPayApp
 //
-//  Created by mark zheng on 13-12-23.
-//  Copyright (c) 2013年 fullpay. All rights reserved.
+//  Created by mark zheng on 14-2-24.
+//  Copyright (c) 2014年 fullpay. All rights reserved.
 //
 
-#import "FPMarketing.h"
+#import "FPPreferModel.h"
 
-@implementation MarketingItem
+@implementation FPPreferItem
 
 -(id)initWithDictionary:(NSDictionary *)attributes;
 {
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation FPMarketing
+@implementation FPPreferModel
 
 - (id)initWithAttributes:(NSDictionary *)attributes
 {
@@ -58,14 +58,14 @@
                     if ([lotteryInfo count] > 0) {
                         NSMutableArray *mutableLottery = [NSMutableArray arrayWithCapacity:[lotteryInfo count]];
                         for (NSDictionary *dict in lotteryInfo) {
-                            MarketingItem *lot = [[MarketingItem alloc] initWithDictionary:dict];
+                            FPPreferItem *lot = [[FPPreferItem alloc] initWithDictionary:dict];
                             [mutableLottery addObject:lot];
                         }
-                        self.marketings = mutableLottery;
+                        self.preferItems = mutableLottery;
                     } else {
                         _result = NO;
                     }
-
+                    
                 } else {
                     _result = NO;
                 }
@@ -87,16 +87,16 @@
 }
 
 
-+ (void)getMarketing:(NSString *)start andLimit:(NSString *)limit andBlock:(void(^)(FPMarketing *marketing,NSError *error))block
++ (void)getFPPreferModel:(NSString *)start andLimit:(NSString *)limit andBlock:(void(^)(FPPreferModel *marketing,NSError *error))block
 {
     NSString *memberNo = [Config Instance].memberNo;
-
+    
     FPClient *urlClient = [FPClient sharedClient];
     NSDictionary *parameters = [urlClient userMarketingQuery:memberNo andLimit:limit andStart:start andEmail:nil andActivityName:nil andActivityType:nil andActivityStatus:nil andBeginTime:nil andEndTime:nil];
     
-    [urlClient postPath:kFPPost parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"111:%@",responseObject);
-        FPMarketing *marketingData = [[FPMarketing alloc] initWithAttributes:responseObject];
+    [urlClient POST:kFPPost parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"userMarketingQuery:%@",responseObject);
+        FPPreferModel *marketingData = [[FPPreferModel alloc] initWithAttributes:responseObject];
         if (block) {
             block(marketingData,nil);
         }
@@ -106,6 +106,5 @@
         }
     }];
 }
-
 
 @end

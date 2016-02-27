@@ -1,9 +1,9 @@
 //
-//  FPMarketing.h
+//  FPPreferModel.h
 //  FullPayApp
 //
-//  Created by mark zheng on 13-12-23.
-//  Copyright (c) 2013年 fullpay. All rights reserved.
+//  Created by mark zheng on 14-2-24.
+//  Copyright (c) 2014年 fullpay. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -58,7 +58,7 @@
  validateCode = "";
  }
  */
-@interface MarketingItem : NSObject
+@interface FPPreferItem : NSObject
 
 @property (nonatomic,strong) NSString *activityBeginDate;
 @property (nonatomic,strong) NSString *activityEndDate;
@@ -78,7 +78,7 @@
 
 @end
 
-@interface FPMarketing : NSObject
+@interface FPPreferModel : NSObject
 
 @property (readonly) BOOL   result;
 @property (readonly) NSString *errorInfo;
@@ -87,10 +87,10 @@
 @property (nonatomic,assign) NSInteger limit;
 @property (nonatomic,assign) NSInteger start;
 
-@property (nonatomic,strong) NSArray    *marketings;
+@property (nonatomic,strong) NSArray    *preferItems;
 
 - (id)initWithAttributes:(NSDictionary *)attributes;
 
-+ (void)getMarketing:(NSString *)start andLimit:(NSString *)limit andBlock:(void(^)(FPMarketing *marketing,NSError *error))block;
++ (void)getFPPreferModel:(NSString *)start andLimit:(NSString *)limit andBlock:(void(^)(FPPreferModel *marketing,NSError *error))block;
 
 @end
