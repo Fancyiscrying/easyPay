@@ -11,5 +11,5 @@
 @interface FPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (assign, nonatomic) bool hasCheckAppVersion;
 @end

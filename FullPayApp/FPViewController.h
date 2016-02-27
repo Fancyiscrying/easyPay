@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface FPViewController : UIViewController
+{
+    UIView  *defaultBackView;
+}
 
+@property (nonatomic,assign) FPControllerState  launch_state;
+
+- (void)showMojiNotice:(BOOL)flag;
+
+- (void)showToastMessage:(NSString *)message;
+
+- (void)gotoHomePage;
 @end
